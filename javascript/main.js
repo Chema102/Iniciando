@@ -34,9 +34,4 @@ console.log(edad);
 
 edad.push(12);
 console.log(edad);
-
-
-// string
-
-
   
