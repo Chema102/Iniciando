@@ -22,6 +22,8 @@ for (let e = 0; e < numeros.length; e++) {
     console.log(numeros[e]);
 
 }
+
+
 const nombre = {
     nombre:'jose',
     apellido:'Quiñonez',
