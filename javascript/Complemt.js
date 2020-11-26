@@ -98,3 +98,43 @@ console.log(arr1, arr2);
 //aqui juntamos los dos arreglos en un solo agreglo
 const arr3 = [...arr1, ...arr2];
 console.log(arr3);
+
+//Arrow functions
+//es una nueva fotmda de definir una funcion anonima
+/*nomas se puede hacer esto cuando nomas tenemos que enviar un valor, cuabo son mas valores a recibir, tenemos que poner ()*/
+const saluda = (nom) => {
+  console.log(`hola ${nom}`);
+};
+saluda("pipo");
+
+/*const suma = function (a,b){ 
+  return a+b;
+
+}*/
+
+const suma = (a, b) => a + b;
+
+console.log(suma(5, 6));
+
+//--------------------------------
+//prototipos
+
+//funcion contructora
+function persona2(nombre, apellido, edad) {
+  this.nombre = nombre;
+  this.apellido = apellido;
+  this.edad = edad;
+}
+//los metodos los tenemos que agregar asi para que las funciones no se dupliquen y tenga un mejor rendimiento  
+persona2.prototype.hola = function () {
+  console.log(`hola soy ${this.nombre}`);
+};
+
+let pipo1 = new persona2("Pipo", "Garcia", 5),
+  pipo2 = new persona2("Pipo2", "garcitas", 6);
+
+console.log(pipo1);
+console.log(pipo2);
+
+pipo1.hola();
+pipo2.hola();
