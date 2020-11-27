@@ -120,21 +120,50 @@ console.log(suma(5, 6));
 //prototipos
 
 //funcion contructora
-function persona2(nombre, apellido, edad) {
+function personaB(nombre, apellido, edad) {
   this.nombre = nombre;
   this.apellido = apellido;
   this.edad = edad;
 }
 //los metodos los tenemos que agregar asi para que las funciones no se dupliquen y tenga un mejor rendimiento  
-persona2.prototype.hola = function () {
+personaB.prototype.hola = function () {
   console.log(`hola soy ${this.nombre}`);
 };
 
-let pipo1 = new persona2("Pipo", "Garcia", 5),
-  pipo2 = new persona2("Pipo2", "garcitas", 6);
+//herencia prototipica
+function personaN(nombre, apellido, edad, color) {
+  this.super = personaB;
+  this.super(nombre,apellido, edad);
+  this.color = color;
+  
+}
+
+//personaN hereda de personaB
+personaN.prototype = new personaB();
+personaN.prototype.constructor = personaN;
+
+//sobre escritura de del prototipo padre(personaB) en el hijo(personaN)
+personaN.prototype.hola = function() {
+  console.log(`hola soy negro y me llamo ${this.nombre}${this.apellido}`);
+  
+}
+
+personaN.prototype.navaja = function(){
+  console.log(`dame todo tu ninero hemono`);
+
+}
+
+
+const pipo1 = new personaB("Pipo", "Garcia", 5),
+  pipo2 = new personaB("Pipo2", "garcitas", 6);
 
 console.log(pipo1);
-console.log(pipo2);
-
 pipo1.hola();
-pipo2.hola();
+console.log(pipo2);
+pipo2.hola(); 
+
+const pipoN = new personaN('Pipo',' Nepo',5,'negro');
+
+console.log(pipoN);
+pipoN.hola();
+pipoN.navaja();
