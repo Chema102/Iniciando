@@ -1,4 +1,4 @@
-const poppo = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
+/*const poppo = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
 
 for (let i = 0; i < poppo.length; i++) {
   if (i === 3) {
@@ -79,7 +79,7 @@ function sumar(a, b, ...c) {
 
   return resultado;
 }
-/* 
+ 
 console.log(sumar(1,2));
 console.log(sumar(1,2,3));
 console.log(sumar(1,2,3,4));
@@ -87,7 +87,7 @@ console.log(sumar(1,2,3,4,5));
 console.log(sumar(1,2,3,4,5,6));
 console.log(sumar(1,2,3,4,5,6,7));
 console.log(sumar(1,2,3,4,5,6,7,8));
-console.log(sumar(1,2,3,4,5,6,7,8,9));*/
+console.log(sumar(1,2,3,4,5,6,7,8,9));
 
 // operador Spread
 
@@ -98,19 +98,19 @@ console.log(arr1, arr2);
 //aqui juntamos los dos arreglos en un solo agreglo
 const arr3 = [...arr1, ...arr2];
 console.log(arr3);
-
+*/
 //Arrow functions
 //es una nueva fotmda de definir una funcion anonima
-/*nomas se puede hacer esto cuando nomas tenemos que enviar un valor, cuabo son mas valores a recibir, tenemos que poner ()*/
+/*nomas se puede hacer esto cuando nomas tenemos que enviar un valor, cuabo son mas valores a recibir, tenemos que poner ()
 const saluda = (nom) => {
   console.log(`hola ${nom}`);
 };
 saluda("pipo");
-
+*/
 /*const suma = function (a,b){ 
   return a+b;
 
-}*/
+}
 
 const suma = (a, b) => a + b;
 
@@ -167,3 +167,90 @@ const pipoN = new personaN('Pipo',' Nepo',5,'negro');
 console.log(pipoN);
 pipoN.hola();
 pipoN.navaja();
+*/
+//lo qu hacen las clases es hacer la escritura mas facil
+class persona {
+  //el contructor es un metodo especial que se ejecuta en el momento de intalaciar la clase
+  constructor(nombre, apellido, edad) {
+    this.nombre = nombre;
+    this.apellido = apellido;
+    this.edad = edad;
+  }
+
+  hola() {
+    console.log(
+      `hola soy ${this.nombre} ${this.apellido} y tengo ${this.edad} años`
+    );
+  }
+  camina() {
+    console.log(`${this.nombre} esta caminando nomrmal`);
+  }
+}
+
+// estamos eredando
+class pNeg extends persona {
+  constructor(nombre, apellido, edad, armas, educacion) {
+    //con el metodo super() mandamos a llamas al contructor de la clase oto-san
+    super(nombre, apellido, edad);
+    this.armas = armas;
+    this.educacion = educacion;
+  }
+  //sobre escritura
+  hola() {
+    console.log(`hola yo soy ${this.nombre}${this.apellido} y soy negro`);
+  }
+
+  camina() {
+    console.log(`${this.nombre} esta caminando como sholo`);
+  }
+
+  navajear() {
+    console.log(
+      `te navajeo papi ${this.nombre} hemano, eso te pasa por ser rico`
+    );
+  }
+}
+
+class pBlan extends persona {
+  constructor(nombre, apellido, edad, educacion) {
+    //con el metodo super() mandamos a llamas al contructor de la clase oto-san
+    super(nombre, apellido, edad);
+    this.educacion = educacion;
+  }
+  //sobre escritura
+  hola() {
+    console.log(`hola yo soy ${this.nombre} ${this.apellido} y tengo ${this.edad} años`);
+  }
+
+  camina() {
+    console.log(`${this.nombre} esta caminando elegante y tiene ${this.educacion} terminada`);
+  }
+  saludar(){
+    console.log(`saludando`);
+  }
+
+  
+}
+
+
+
+const pJose = new pBlan("Jose", "Quinonez", 16,'doctorado'),
+  pCucs = new pBlan("cucs", "garcia", 20,'3 carreras');
+
+console.log(pJose);
+pJose.hola();
+pJose.camina();
+pJose.saludar();
+console.log(pCucs);
+pCucs.hola();
+pCucs.camina();
+pCucs.saludar();
+
+const pBryan = new pNeg('Bryan','Gonzales',25,'navaja','Primarioa');
+
+console.log(pBryan);
+pBryan.hola();
+pBryan.camina();
+pBryan.navajear();
+
+
