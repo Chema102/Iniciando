@@ -175,6 +175,7 @@ class persona {
     this.nombre = nombre;
     this.apellido = apellido;
     this.edad = edad;
+    this.dinero = null;
   }
 
   hola() {
@@ -184,8 +185,24 @@ class persona {
   }
   camina() {
     console.log(`${this.nombre} esta caminando nomrmal`);
+  } 
+  //un metodo estatico se puede ejecutar sin necesidad de instanciar la clase
+  static queEres(){
+    console.log(`esto es un metodo estatico`)
+
+
+  }
+  //los setters y getters son metodos especiales que nos permiten establecer y obtener los valores de atributos de nuestra clase
+  get getDinero(){
+    return this.dinero;
+  }
+  set setDinero(dinero){
+    this.dinero = dinero;
+
+
   }
 }
+
 
 // estamos eredando
 class pNeg extends persona {
@@ -213,11 +230,12 @@ class pNeg extends persona {
 
 class pBlan extends persona {
   constructor(nombre, apellido, edad, educacion) {
-    //con el metodo super() mandamos a llamas al contructor de la clase oto-san
+
     super(nombre, apellido, edad);
     this.educacion = educacion;
+    
   }
-  //sobre escritura
+
   hola() {
     console.log(`hola yo soy ${this.nombre} ${this.apellido} y tengo ${this.edad} años`);
   }
@@ -229,10 +247,10 @@ class pBlan extends persona {
     console.log(`saludando`);
   }
 
-  
+ 
 }
 
-
+persona.queEres();
 
 const pJose = new pBlan("Jose", "Quinonez", 16,'doctorado'),
   pCucs = new pBlan("cucs", "garcia", 20,'3 carreras');
@@ -252,5 +270,11 @@ console.log(pBryan);
 pBryan.hola();
 pBryan.camina();
 pBryan.navajear();
+
+console.log(pCucs.dinero);
+pCucs.setDinero = '152,000 pesos';
+console.log(pCucs.dinero);
+
+
 
 
