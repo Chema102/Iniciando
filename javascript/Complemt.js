@@ -169,6 +169,13 @@ pipoN.hola();
 pipoN.navaja();
 */
 //lo qu hacen las clases es hacer la escritura mas facil
+/*
+ ---------------------------------
+
+  clses = class
+  
+----------------------------------
+ */
 class persona {
   //el contructor es un metodo especial que se ejecuta en el momento de intalaciar la clase
   constructor(nombre, apellido, edad) {
@@ -328,3 +335,4 @@ console.log('' && 'derecha');
 console.log(-1 && 'derecha');
 console.log(0 && 'derecha');
 
+console.clear()
