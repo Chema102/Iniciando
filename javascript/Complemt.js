@@ -269,3 +269,62 @@ pBryan.navajear();
 console.log(pCucs.dinero);
 pCucs.setDinero = "152,000 pesos";
 console.log(pCucs.dinero);
+
+console.clear();
+
+/* 
+---------------------------------
+
+  OPERADORES DE CORTOCIRCUITO 
+  
+----------------------------------
+ */
+/*
+Cortocircuito OR(||).-cuando el valor de la izquierda en la
+expresion siempre pueda validar a true, es el valor
+que se cargara por defecto
+
+Cortocircuito AND(&&).-cuando el valor de la izquierda en la
+expresion siempre pueda validar a false, es el valor
+que se cargara por defecto
+
+*/
+
+ function pipo(nombre) {
+   //esto es un operador de cortocircuito
+  nombre = nombre || "Desconocido"
+  console.log(`hola soy ${nombre}`)
+  
+}
+//es lo mismo pero con menos codigo xd
+function pepe2(nombre = 'desconocido') {
+ 
+ console.log(`hola soy ${nombre}`)
+ 
+}
+
+pipo('pepe');
+pipo();
+
+pepe2('pipo')
+pepe2();
+
+console.log('izquierda'||'derecha');
+console.log(1||'derecha');
+console.log(true||'derecha');
+console.log({}||'derecha');
+console.log([]||'derecha');
+console.log(false||'derecha');
+console.log(undefined||'derecha');
+console.log(NaN||'derecha');
+console.log(''||'derecha');
+console.log(-1||'derecha');
+console.log(0||'derecha');
+
+console.log(false && 'derecha');
+console.log(undefined && 'derecha');
+console.log(NaN && 'derecha');
+console.log('' && 'derecha');
+console.log(-1 && 'derecha');
+console.log(0 && 'derecha');
+
