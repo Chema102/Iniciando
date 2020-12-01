@@ -185,24 +185,19 @@ class persona {
   }
   camina() {
     console.log(`${this.nombre} esta caminando nomrmal`);
-  } 
+  }
   //un metodo estatico se puede ejecutar sin necesidad de instanciar la clase
-  static queEres(){
-    console.log(`esto es un metodo estatico`)
-
-
+  static queEres() {
+    console.log(`esto es un metodo estatico`);
   }
   //los setters y getters son metodos especiales que nos permiten establecer y obtener los valores de atributos de nuestra clase
-  get getDinero(){
+  get getDinero() {
     return this.dinero;
   }
-  set setDinero(dinero){
+  set setDinero(dinero) {
     this.dinero = dinero;
-
-
   }
 }
-
 
 // estamos eredando
 class pNeg extends persona {
@@ -230,30 +225,30 @@ class pNeg extends persona {
 
 class pBlan extends persona {
   constructor(nombre, apellido, edad, educacion) {
-
     super(nombre, apellido, edad);
     this.educacion = educacion;
-    
   }
 
   hola() {
-    console.log(`hola yo soy ${this.nombre} ${this.apellido} y tengo ${this.edad} años`);
+    console.log(
+      `hola yo soy ${this.nombre} ${this.apellido} y tengo ${this.edad} años`
+    );
   }
 
   camina() {
-    console.log(`${this.nombre} esta caminando elegante y tiene ${this.educacion} terminada`);
+    console.log(
+      `${this.nombre} esta caminando elegante y tiene ${this.educacion} terminada`
+    );
   }
-  saludar(){
+  saludar() {
     console.log(`saludando`);
   }
-
- 
 }
 
 persona.queEres();
 
-const pJose = new pBlan("Jose", "Quinonez", 16,'doctorado'),
-  pCucs = new pBlan("cucs", "garcia", 20,'3 carreras');
+const pJose = new pBlan("Jose", "Quinonez", 16, "doctorado"),
+  pCucs = new pBlan("cucs", "garcia", 20, "3 carreras");
 
 console.log(pJose);
 pJose.hola();
@@ -264,7 +259,7 @@ pCucs.hola();
 pCucs.camina();
 pCucs.saludar();
 
-const pBryan = new pNeg('Bryan','Gonzales',25,'navaja','Primarioa');
+const pBryan = new pNeg("Bryan", "Gonzales", 25, "navaja", "Primarioa");
 
 console.log(pBryan);
 pBryan.hola();
@@ -272,9 +267,5 @@ pBryan.camina();
 pBryan.navajear();
 
 console.log(pCucs.dinero);
-pCucs.setDinero = '152,000 pesos';
+pCucs.setDinero = "152,000 pesos";
 console.log(pCucs.dinero);
-
-
-
-

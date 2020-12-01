@@ -19,24 +19,24 @@ console.log(document);
 //esto es para agruparlos en grupos
 console.group("dias de la semana");
 
-    console.log("lunes");
-    console.log(" martes");
-    console.log(" miercoles");
-    console.log("jueves");
-    console.log("viernes");
-    console.log("sabado");
-    console.log("domingo");
+console.log("lunes");
+console.log(" martes");
+console.log(" miercoles");
+console.log("jueves");
+console.log("viernes");
+console.log("sabado");
+console.log("domingo");
 
 console.groupEnd();
 console.groupCollapsed("dias de la semana");
 
-    console.log("lunes");
-    console.log(" martes");
-    console.log(" miercoles");
-    console.log("jueves");
-    console.log("viernes");
-    console.log("sabado");
-    console.log("domingo");
+console.log("lunes");
+console.log(" martes");
+console.log(" miercoles");
+console.log("jueves");
+console.log("viernes");
+console.log("sabado");
+console.log("domingo");
 
 console.groupEnd();
 
@@ -44,42 +44,41 @@ console.clear();
 //esto sirve para hacer tablas con la consola
 console.table(Object.entries(console).sort());
 
-const numeros = [1,2,3,4,5],
-    vocales = ['a','e','i','o','u'];
+const numeros = [1, 2, 3, 4, 5],
+  vocales = ["a", "e", "i", "o", "u"];
 
 console.table(numeros);
 console.table(vocales);
 
 const persona = {
-    nombre: 'pipo',
-    apellido: 'garcia',
-    edad: 18,
-}
+  nombre: "pipo",
+  apellido: "garcia",
+  edad: 18,
+};
 console.table(persona);
- 
+
 console.clear();
 
 //esto es para ver cuanto tarda en ejecutar el codigo
-console.time('cuanto tarda')
+console.time("cuanto tarda");
 const arreglo = Array(1000000);
 for (let index = 0; index < arreglo.length; index++) {
-    arreglo[index] = index;  
+  arreglo[index] = index;
 }
-  console.timeEnd('cuanto tarda')
+console.timeEnd("cuanto tarda");
 //  console.log(arreglo)
 
-console.clear()
+console.clear();
 
 for (let index = 0; index <= 100; index++) {
-    console.count('a')
-    console.log(index)
+  console.count("a");
+  console.log(index);
 }
 
-console.clear()
+console.clear();
 
 let x = 5,
-y = 2 ,
-pruebaxy = 'se esperaba que x siempre sea menor que y';
+  y = 2,
+  pruebaxy = "se esperaba que x siempre sea menor que y";
 
-
-console.assert(x < y, {x,y,pruebaxy})
+console.assert(x < y, { x, y, pruebaxy });

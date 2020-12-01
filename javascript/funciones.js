@@ -21,12 +21,11 @@ function conParametros(name, numero) {
   console.log(`mi nombre es ${name} y edad de ${numero} años`);
 }
 
-
 /* pero este tipo de funcion no se puede manda a llamar antes porque aun no a sido inicialidado y dara error 
 funExpres();*/
 //funciones anonimas
-const funExpres = function(){
-    console.log('esto es una funcion anonima')
-}
+const funExpres = function () {
+  console.log("esto es una funcion anonima");
+};
 
 funExpres();

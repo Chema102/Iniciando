@@ -20,5 +20,3 @@ console.log(b);
 b.forEach(function (e, i) {
   console.log(`<li id='${i}'> el nombre es ${e} </li>`);
 });
-
-

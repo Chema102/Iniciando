@@ -28,29 +28,29 @@ let dia = 6;
 
 switch (dia) {
   case 0:
-      // aqui se escribe el codigo que se ejecutara
-      console.log('domingo');
+    // aqui se escribe el codigo que se ejecutara
+    console.log("domingo");
     break; //aqui se cierra el caso
   case 1:
-    console.log('lunes');
+    console.log("lunes");
     break;
   case 2:
-    console.log('martes');
+    console.log("martes");
     break;
   case 3:
-    console.log('miercoles');
+    console.log("miercoles");
     break;
   case 4:
-    console.log('jueves');
+    console.log("jueves");
     break;
   case 5:
-    console.log('viernes');
+    console.log("viernes");
     break;
   case 6:
-    console.log('sabado');
+    console.log("sabado");
     break;
 
   default:
-      console.log('error');
+    console.log("error");
     break;
 }
