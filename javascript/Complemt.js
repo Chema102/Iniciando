@@ -351,6 +351,43 @@ let ecpReg2 = /pipo{1,}/ig;
 console.log(ecpReg2.test(lettras));
 console.log(ecpReg2.exec(lettras));
 
+console.clear();
+/* 
+---------------------------------
+
+  FUNCION ANONIMA AUTOEJECUTABLE
+  
+----------------------------------
+
+*/
+(function(d,w,c){
+  c.log('hola buenas tardes')
+  
+  c.log(d);
+  c.log(w);
+  c.log(c);
+
+})(Document,window,console);
 
 
+(function(){
+  console.log('hola buenas tardes x2')
+})();
 
+ 
+//hay cuatro formas de hacerlo
+//2
+((function(){
+  console.log('forma 2')
+
+})());
+
+//3
++function (){
+  console.log('forma 3')
+}();
+
+//4
+!function (){
+  console.log('forma 4')
+}();
