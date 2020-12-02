@@ -297,42 +297,60 @@ que se cargara por defecto
 
 */
 
- function pipo(nombre) {
-   //esto es un operador de cortocircuito
-  nombre = nombre || "Desconocido"
-  console.log(`hola soy ${nombre}`)
-  
+function pipo(nombre) {
+  //esto es un operador de cortocircuito
+  nombre = nombre || "Desconocido";
+  console.log(`hola soy ${nombre}`);
 }
 //es lo mismo pero con menos codigo xd
-function pepe2(nombre = 'desconocido') {
- 
- console.log(`hola soy ${nombre}`)
- 
+function pepe2(nombre = "desconocido") {
+  console.log(`hola soy ${nombre}`);
 }
 
-pipo('pepe');
+pipo("pepe");
 pipo();
 
-pepe2('pipo')
+pepe2("pipo");
 pepe2();
 
-console.log('izquierda'||'derecha');
-console.log(1||'derecha');
-console.log(true||'derecha');
-console.log({}||'derecha');
-console.log([]||'derecha');
-console.log(false||'derecha');
-console.log(undefined||'derecha');
-console.log(NaN||'derecha');
-console.log(''||'derecha');
-console.log(-1||'derecha');
-console.log(0||'derecha');
+console.log("izquierda" || "derecha");
+console.log(1 || "derecha");
+console.log(true || "derecha");
+console.log({} || "derecha");
+console.log([] || "derecha");
+console.log(false || "derecha");
+console.log(undefined || "derecha");
+console.log(NaN || "derecha");
+console.log("" || "derecha");
+console.log(-1 || "derecha");
+console.log(0 || "derecha");
 
-console.log(false && 'derecha');
-console.log(undefined && 'derecha');
-console.log(NaN && 'derecha');
-console.log('' && 'derecha');
-console.log(-1 && 'derecha');
-console.log(0 && 'derecha');
+console.log(false && "derecha");
+console.log(undefined && "derecha");
+console.log(NaN && "derecha");
+console.log("" && "derecha");
+console.log(-1 && "derecha");
+console.log(0 && "derecha");
 
-console.clear()
+console.clear();
+/* 
+---------------------------------
+
+ EXPRECIONES REGULARES
+  
+----------------------------------
+https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Regular_Expressions
+ */
+
+let lettras = "PipO estubo 3 pipiando en PipOliando";
+
+//let ecpReg = new RegExp("pipo","");
+
+//\d es solo para puros numeros
+let ecpReg2 = /pipo{1,}/ig;
+console.log(ecpReg2.test(lettras));
+console.log(ecpReg2.exec(lettras));
+
+
+
+
