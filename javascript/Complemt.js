@@ -359,7 +359,7 @@ console.clear();
   
 ----------------------------------
 
-*/
+
 (function(d,w,c){
   c.log('hola buenas tardes')
   
@@ -391,3 +391,5 @@ console.clear();
 !function (){
   console.log('forma 4')
 }();
+*/
+
