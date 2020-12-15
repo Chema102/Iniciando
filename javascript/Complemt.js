@@ -66,8 +66,12 @@ const dog = {
   },
 };
 console.log(dog);
+ ---------------------------------
 
-//paremetros REST
+        paremetros REST
+  
+----------------------------------
+
 //esto lo que hace es sumar numeros infinitos
 
 function sumar(a, b, ...c) {
@@ -89,8 +93,12 @@ console.log(sumar(1,2,3,4,5,6,7));
 console.log(sumar(1,2,3,4,5,6,7,8));
 console.log(sumar(1,2,3,4,5,6,7,8,9));
 
-// operador Spread
 
+ ---------------------------------
+
+        operador Spread
+  
+----------------------------------
 const arr1 = [1, 2, 3, 4, 5],
   arr2 = [6, 7, 8, 9, 0];
 
@@ -99,7 +107,12 @@ console.log(arr1, arr2);
 const arr3 = [...arr1, ...arr2];
 console.log(arr3);
 */
-//Arrow functions
+
+/* ---------------------------------
+
+ //Arrow functions
+  
+----------------------------------*/
 //es una nueva fotmda de definir una funcion anonima
 /*nomas se puede hacer esto cuando nomas tenemos que enviar un valor, cuabo son mas valores a recibir, tenemos que poner ()
 const saluda = (nom) => {
@@ -117,7 +130,12 @@ const suma = (a, b) => a + b;
 console.log(suma(5, 6));
 
 //--------------------------------
-//prototipos
+---------------------------------
+
+  prototipos
+  
+----------------------------------
+
 
 //funcion contructora
 function personaB(nombre, apellido, edad) {
